@@ -1,19 +1,20 @@
 {
   "name": "repo-graph",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "gen": "yarn install && yarn run get-repos $ORG && yarn run create-outputs",
+    "get-repos": "node src/get-repos.js $ORG > logs/get-repos.log",
+    "create-outputs": "node src/create-outputs.js"
   },
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "16.0.3",
+    "octokit": "^2.0.7",
+    "toposort": "^2.0.2"
+  },
   "devDependencies": {
-    "nx": "14.7.11",
-    "@nrwl/cli": "14.7.11",
-    "@nrwl/workspace": "14.7.11",
-    "typescript": "~4.8.2",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "typescript": "~4.8.2"
   }
 }

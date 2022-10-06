@@ -7,8 +7,6 @@ const { getBlacklist } = require('./get-packages');
 
 const GITHUB_REPOS_URL = '/orgs/{org}/repos';
 
-const [ORGANIZATION_NAME] = process.argv.slice(2);
-
 const REPO_BLACKLIST = getBlacklist();
 
 const oct = new octokit.Octokit({ auth: process.env.GITHUB_API_KEY });

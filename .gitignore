@@ -34,9 +34,6 @@ yarn-error.log
 testem.log
 /typings
 
-# blacklist file containing sensitive info
-**/exclusions.txt
-
 # System Files
 .DS_Store
 Thumbs.db

@@ -5,7 +5,6 @@ const { exec } = require('child_process');
 
 const { getBlacklist } = require('./get-packages');
 
-// const ORGANIZATION_NAME = 'sensource';
 const GITHUB_REPOS_URL = '/orgs/{org}/repos';
 
 const [ORGANIZATION_NAME] = process.argv.slice(2);

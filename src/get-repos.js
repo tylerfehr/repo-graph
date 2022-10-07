@@ -9,6 +9,8 @@ const GITHUB_REPOS_URL = '/orgs/{org}/repos';
 
 const REPO_BLACKLIST = getBlacklist();
 
+const [ORGANIZATION_NAME] = process.argv.slice(2);
+
 const oct = new octokit.Octokit({ auth: process.env.GITHUB_API_KEY });
 
 const getRepos = async (page, perPage = 100) => oct.request(

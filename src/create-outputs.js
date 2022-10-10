@@ -43,7 +43,7 @@ getPackages((packages) => {
       return acc;
     },
     {},
-  )
+  );
 
   const graph = packages.flatMap((pkg) => getAllDependencies(pkg).reduce(
     // if the dependency is inside our list of repositories, we want to add it

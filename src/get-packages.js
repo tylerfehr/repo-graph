@@ -41,11 +41,11 @@ const getPackages = (callback) => {
 const getBlacklist = () => {
   try {
     return readFileSync(path.resolve(__dirname, `${REPO_PATH}/exclusions.txt`))
-    .toString()
-    .split('\n')
-    .reduce((acc, curr) => !!curr ? [...acc, curr.trim()] : acc, []);
+      .toString()
+      .split('\n')
+      .reduce((acc, curr) => !!curr ? [...acc, curr.trim()] : acc, []);
   }
-  catch (err) {
+  catch (_) {
     return '';
   }
 };

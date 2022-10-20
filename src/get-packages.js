@@ -46,7 +46,7 @@ const getBlacklist = () => {
       .reduce((acc, curr) => !!curr ? [...acc, curr.trim()] : acc, []);
   }
   catch (_) {
-    return '';
+    return [];
   }
 };
 

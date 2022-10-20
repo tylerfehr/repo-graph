@@ -44,7 +44,7 @@ const getPackageJsonForRepo = async (repoName, sshUrl) => {
       }
     });
   });
-}
+};
 
 const getPageOfRepos = async (page, totalRepos) => {
   const repos = await getRepos(page);
@@ -83,6 +83,6 @@ const getPageOfRepos = async (page, totalRepos) => {
 
 const work = async () => {
   getPageOfRepos(1, 0);
-}
+};
 
 work().catch(console.error);
